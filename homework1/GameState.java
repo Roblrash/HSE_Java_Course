@@ -19,15 +19,13 @@ public class GameState {
         this.maxAttempts = maxAttempts;
     }
 
-    public boolean processGuess(char letter) {
+    public void processGuess(char letter) {
         letter = Character.toLowerCase(letter);
 
         if (secretWord.indexOf(letter) >= 0) {
             correctGuesses.add(letter);
-            return true;
         } else {
             wrongGuesses.add(letter);
-            return false;
         }
     }
 
